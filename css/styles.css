@@ -29,6 +29,7 @@
   --social-networks-icon-main-color: #afb1b8;
   --social-networks-icon-hover-color: #ffffff;
   --social-networks-icon-second-color: #ffffff;
+  --main-background-color: #ffffff;
 }
 h1,
 h2,
@@ -292,6 +293,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   padding-bottom: 30px;
+  background-color: var(--main-background-color);
 }
 
 .team-list-item:not(:last-child) {
