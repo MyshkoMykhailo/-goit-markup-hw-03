@@ -30,6 +30,7 @@
   --social-networks-icon-hover-color: #ffffff;
   --social-networks-icon-second-color: #ffffff;
   --main-background-color: #ffffff;
+  --hero-overlay-gradient: rgba(47, 48, 58, 0.4);
 }
 h1,
 h2,
@@ -66,6 +67,10 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*-------------------header-----------------*/
@@ -129,19 +134,15 @@ img {
   margin-right: 50px;
 }
 
+.header-contacts-item {
+  color: var(--website-navigation-contacts-color);
+}
+
 .header-contact-icon {
   fill: currentColor;
   margin-right: 10px;
 }
 
-.header-contacts-item {
-  color: var(--website-navigation-contacts-color);
-}
-
-.link {
-  text-decoration: none;
-  color: inherit;
-}
 .header-contacts .link {
   display: flex;
   align-items: center;
@@ -158,13 +159,19 @@ img {
 
 /*--------------------hero------------------------*/
 .hero {
+  max-width: 1600px;
+
   background-color: var(--hero-background-color);
   text-align: center;
-  background: rgba(47, 48, 58, 0.4);
-  background: url("../images/hero-bgimage.jpg");
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero-bgimage.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .hero.section {
@@ -343,13 +350,9 @@ img {
   fill: var(--social-networks-icon-second-color);
 }
 
-.team-social-network-field:hover,
-.team-social-network-field:focus {
+.team-social-network-link:hover .team-social-network-field,
+.team-social-network-link:focus .team-social-network-field {
   background-color: var(--website-navigation-hover-color);
-}
-
-.team-social-network-field:hover > .team-card-social-networks-logo,
-.team-social-network-field:focus > .team-card-social-networks-logo {
   fill: var(--social-networks-icon-hover-color);
 }
 
